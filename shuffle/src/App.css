@@ -1,3 +1,13 @@
 button {
   cursor: pointer;
 }
+
+.menubar-content,
+.menubar-item,
+.menubar-trigger,
+.menubar-sub-trigger,
+[role="menuitem"],
+[role="menu"] *,
+.menubar-menu *:hover {
+  cursor: pointer !important;
+}
