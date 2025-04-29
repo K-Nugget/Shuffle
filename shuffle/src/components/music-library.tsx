@@ -121,8 +121,8 @@ export function MusicLibrary({
   }
 
   return (
-    <Card>
-      <CardHeader>
+    <Card className="flex flex-col h-[calc(100vh-180px)]">
+      <CardHeader className="flex-shrink-0">
         <div className="flex justify-between items-center mb-4">
           <CardTitle>
             <h2 className="text-xl font-bold">Music Library</h2>
@@ -131,7 +131,7 @@ export function MusicLibrary({
         </div>
         <CardDescription>{folderPath}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-1 overflow-hidden">
         {loading ? (
           <div className="space-y-2">
             <Skeleton className="h-12 w-full" />
@@ -139,21 +139,21 @@ export function MusicLibrary({
             <Skeleton className="h-12 w-full" />
           </div>
         ) : files.length > 0 ? (
-          <div className="border rounded-md">
+          <div className="border rounded-md h-full flex flex-col">
             {/* Header Row */}
-            <div className="grid grid-cols-12 gap-2 p-2 border-b bg-muted font-medium text-sm">
+            <div className="grid grid-cols-12 gap-2 p-2 border-b bg-muted font-medium text-sm sticky top-0 z-10">
               <div className="col-span-5">Title</div>
               <div className="col-span-3">Artist</div>
               <div className="col-span-3">Album</div>
               <div className="col-span-1 text-right">Duration</div>
             </div>
 
-            {/* Music Files List */}
-            <div className="divide-y">
+            {/* Music Files List - Enhanced Scrollable */}
+            <div className="divide-y overflow-y-auto flex-1 scroll-smooth scrollbar-thin scrollbar-thumb-rounded-md scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/30">
               {files.map((file, index) => (
                 <div
                   key={index}
-                  className={`grid grid-cols-12 gap-2 p-3 hover:bg-muted items-center cursor-pointer ${
+                  className={`grid grid-cols-12 gap-2 p-3 hover:bg-muted/80 transition-colors duration-150 items-center cursor-pointer ${
                     currentTrack?.path === file.path ? "bg-primary/10" : ""
                   }`}
                   onClick={() => onTrackSelect?.(file)}>

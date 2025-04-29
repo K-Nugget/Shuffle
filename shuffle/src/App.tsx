@@ -138,14 +138,14 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <main className="flex min-h-screen items-center justify-center p-4">
+      <main className="flex flex-col h-screen overflow-hidden">
         <div className="fixed top-4 right-4 z-50">
           <ModeToggle />
         </div>
         <div className="fixed top-4 left-4 z-50">
           <Menu />
         </div>
-        <div className="mt-16 mb-24 flex-1">
+        <div className="flex-1 mt-16 mb-24 px-4 overflow-hidden">
           <MusicLibrary
             onTrackSelect={setCurrentTrack}
             currentTrack={currentTrack}

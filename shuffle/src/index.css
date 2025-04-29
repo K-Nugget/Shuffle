@@ -118,3 +118,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Scrollbar styling */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-thumb-rounded-md::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+  }
+
+  .scrollbar-thumb-primary\/20::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary) / 0.2);
+  }
+
+  .hover\:scrollbar-thumb-primary\/30:hover::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary) / 0.3);
+  }
+
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
