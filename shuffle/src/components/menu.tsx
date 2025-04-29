@@ -10,6 +10,7 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import { openUrl } from "@tauri-apps/plugin-opener";
 
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
@@ -52,7 +53,7 @@ export function Menu() {
 
   const handleGitHub = async () => {
     try {
-      await open("https://github.com/K-Nugget/Shuffle");
+      await openUrl("https://github.com/K-Nugget/Shuffle");
     } catch (error) {
       console.error("Error opening GitHub:", error);
     }
