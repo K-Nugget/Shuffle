@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.12",
