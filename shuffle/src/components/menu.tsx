@@ -97,14 +97,7 @@ export function Menu() {
             </MenubarSubContent>
           </MenubarSub>{" "}
           <MenubarSeparator />
-          <MenubarSub>
-            <MenubarSubTrigger>Settings</MenubarSubTrigger>
-            <MenubarSubContent>
-              <MenubarItem>Email link</MenubarItem>
-              <MenubarItem>Messages</MenubarItem>
-              <MenubarItem>Notes</MenubarItem>
-            </MenubarSubContent>
-          </MenubarSub>
+          <MenubarItem>Settings</MenubarItem>
           <MenubarSeparator />
           <MenubarItem>Exit</MenubarItem>
         </MenubarContent>
