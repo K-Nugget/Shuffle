@@ -7,3 +7,4 @@ Using:
 - Tauri
 - React
 - Shadcn
+
